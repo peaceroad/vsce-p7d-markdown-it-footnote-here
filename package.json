@@ -1,0 +1,30 @@
+{
+  "name": "p7d-markdown-it-footnote-here",
+  "displayName": "p7d-markdown-it-footnote-here",
+  "description": "adds aside[role|doc-footnote] element just below the footnote reference paragraph.",
+  "publisher": "peaceroad",
+  "repository": {
+    "url": "https://github.com/peaceroad/vsce-p7d-markdown-it-footnote-here"
+  },
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.57.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "capabilities": {
+    "virtualWorkspaces": true,
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  },
+  "activationEvents": [],
+  "contributes": {
+    "markdown.markdownItPlugins": true
+  },
+  "main": "./extension.js",
+  "dependencies": {
+    "@peaceroad/markdown-it-footnote-here": "^0.1.0"
+  }
+}

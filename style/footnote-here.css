@@ -1,0 +1,32 @@
+@charset "UTF-8";
+.vscode-body .fn-noteref {
+  margin-inline-start: 0.15em;
+  margin-inline-end: 0.15em;
+  vertical-align: text-top;
+  line-height: 1;
+  font-size: 0.8em;
+}
+.vscode-body .fn {
+  padding: 0.75em 0.25em;
+  border-block-end: 1px dashed currentcolor;
+}
+.vscode-body :not(.fn) + .fn {
+  margin-block-start: 1.5em;
+  border-block-start: 1px dashed currentcolor;
+}
+.vscode-body .fn + :not(.fn) {
+  margin-block-start: 1.5em;
+}
+.vscode-body .fn p {
+  font-size: 0.85em;
+  line-height: 1.55;
+  margin-inline-start: 2.5em;
+}
+.vscode-body .fn-backlink {
+  margin-inline-start: -2.5em;
+  width: 2em;
+  margin-inline-end: 0.5em;
+}
+.vscode-body .fn p:first-child {
+  text-indent: 0;
+}

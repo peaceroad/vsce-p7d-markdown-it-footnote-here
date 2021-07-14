@@ -23,3 +23,13 @@ In VS Code's built-in markdown preview, the value of the class attribute is adde
 </aside>
 <p>A paragraph.</p>
 ```
+
+This extension has a simple CSS to layout the footnotes.
+
+![Figure](docs/footnote-screenshot.png)
+
+---
+
+Notice. You can remove the CSS that this extension applies by checking "P7d Markdown It Footnote Here: Disable Style" of the user settings.
+
+---

@@ -6,7 +6,7 @@
   "repository": {
     "url": "https://github.com/peaceroad/vsce-p7d-markdown-it-footnote-here"
   },
-  "version": "0.1.0",
+  "version": "0.2.0",
   "engines": {
     "vscode": "^1.57.0"
   },
@@ -21,7 +21,21 @@
   },
   "activationEvents": [],
   "contributes": {
-    "markdown.markdownItPlugins": true
+    "markdown.markdownItPlugins": true,
+    "markdown.previewStyles": [
+      "./style/footnote-here.css"
+    ],
+    "configuration": {
+      "type": "objct",
+      "title": "p7d-markdown-it-footnote-here",
+      "properties": {
+        "p7dMarkdownItFootnoteHere.disableStyle": {
+          "type": "boolean",
+          "default": false,
+          "description": "Disable the default CSS of p7d-markdown-it-footnote-here."
+        }
+      }
+    }
   },
   "main": "./extension.js",
   "dependencies": {

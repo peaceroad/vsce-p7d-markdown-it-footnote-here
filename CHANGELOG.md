@@ -1,6 +1,6 @@
 # Change Log
 
-## 0.2.1 - 2024/03/05
+## 0.2.1 - 2025/03/05
 
 - Adjust CSS.
 - Added a note to disable default footnote in the readme.

@@ -33,3 +33,8 @@ This extension has a simple CSS to layout the footnotes.
 Notice. You can remove the CSS that this extension applies by checking "P7d Markdown It Footnote Here: Disable Style" of the user settings.
 
 ---
+
+## Use
+
+It cannot coexist with VSCode's default footnote processing.
+Therefore, before using this extension, turn off the default footnote processing. (Set VSCode Option -> Markdown Extended: Disabled Plugins: 'footnote')

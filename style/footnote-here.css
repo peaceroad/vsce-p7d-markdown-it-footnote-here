@@ -4,10 +4,10 @@
   margin-inline-end: 0.15em;
   vertical-align: text-top;
   line-height: 1;
-  font-size: 0.8em;
+  font-size: 0.85em;
 }
 .vscode-body .fn {
-  padding: 0.75em 0.25em;
+  padding: 0.75em 0.25em calc(0.75em + 1px);
   border-block-end: 1px dashed currentcolor;
 }
 .vscode-body :not(.fn) + .fn {
@@ -18,15 +18,18 @@
   margin-block-start: 1.5em;
 }
 .vscode-body .fn p {
-  font-size: 0.85em;
+  font-size: 0.9em;
   line-height: 1.55;
   margin-inline-start: 2.5em;
 }
-.vscode-body .fn-backlink {
-  margin-inline-start: -2.5em;
-  width: 2em;
-  margin-inline-end: 0.5em;
+.vscode-body .fn p:last-of-type {
+  margin-block-end: 0;
 }
 .vscode-body .fn p:first-child {
   text-indent: 0;
+}
+.vscode-body .fn-backlink {
+  margin-inline-start: -2.5em;
+  margin-inline-end: 0.5em;
+  vertical-align: 1px;
 }

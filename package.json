@@ -6,7 +6,7 @@
   "repository": {
     "url": "https://github.com/peaceroad/vsce-p7d-markdown-it-footnote-here"
   },
-  "version": "0.2.0",
+  "version": "0.2.1",
   "engines": {
     "vscode": "^1.57.0"
   },

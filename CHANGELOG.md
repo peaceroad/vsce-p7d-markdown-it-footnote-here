@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.3.0 - 2026/01/11
+
+- Add endnotes support.
+- Change built-in footnote toggle so the default disables VS Code's built-in rules.
+- And more. see README.md for details.
+
 ## 0.2.1 - 2025/03/05
 
 - Adjust CSS.

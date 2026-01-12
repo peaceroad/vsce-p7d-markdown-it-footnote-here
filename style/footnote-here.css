@@ -1,35 +1,82 @@
-@charset "UTF-8";
-.vscode-body .fn-noteref {
-  margin-inline-start: 0.15em;
-  margin-inline-end: 0.15em;
-  vertical-align: text-top;
+:root {
+  color-scheme: light dark;
+}
+
+.vscode-body :is(.fn-noteref, .en-noteref) {
+  margin-inline-start: 0.175em;
+  margin-inline-end: 0.175em;
+  vertical-align: super;
   line-height: 1;
   font-size: 0.85em;
 }
 .vscode-body .fn {
-  padding: 0.75em 0.25em calc(0.75em + 1px);
-  border-block-end: 1px dashed currentcolor;
+  margin: 1em 0 0 0;
+  /* border-block-end: 1px dashed currentcolor; */
+  color: light-dark(oklch(from currentcolor calc(l + 0.05) c h), oklch(from currentcolor calc(l - 0.05) c h));
 }
 .vscode-body :not(.fn) + .fn {
   margin-block-start: 1.5em;
-  border-block-start: 1px dashed currentcolor;
+  /* border-block-start: 1px dashed currentcolor; */
 }
 .vscode-body .fn + :not(.fn) {
   margin-block-start: 1.5em;
 }
-.vscode-body .fn p {
-  font-size: 0.9em;
-  line-height: 1.55;
-  margin-inline-start: 2.5em;
-}
-.vscode-body .fn p:last-of-type {
-  margin-block-end: 0;
-}
-.vscode-body .fn p:first-child {
-  text-indent: 0;
+.vscode-body .fn {
+  line-height: 1.5;
+  > * {
+    font-size: 0.9em;
+    margin-inline-start: 3em;
+    * {
+      font-size: 100%;
+    }
+    &:first-child {
+      margin-block-end: 0;
+    }
+    + * {
+      margin-block-start: 0.75em;
+    }
+  }
 }
 .vscode-body .fn-backlink {
-  margin-inline-start: -2.5em;
-  margin-inline-end: 0.5em;
-  vertical-align: 1px;
+  display: inline-block;
+  inline-size: 3em;
+  text-align: center;
+  margin-inline-start: -3.25em;
+}
+
+.vscode-body #endnotes {
+  margin-block-start: 3em;
+  color: light-dark(oklch(from currentcolor calc(l + 0.05) c h), oklch(from currentcolor calc(l - 0.05) c h));
+}
+.vscode-body #endnotes > ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+.vscode-body #endnotes > ol li {
+  line-height: 1.5;
+  font-size: 100%;
+  > * {
+    font-size: 0.9em;
+    margin-inline-start: 3em;
+    * {
+      font-size: 100%;
+    }
+    &:first-child {
+      margin-block-end: 0;
+    }
+    + * {
+      margin-block-start: 0.75em;
+    }
+  }
+  + li {
+    margin-block-start: 0.75em;
+  }
+}
+.vscode-body .en-backlink {
+  display: inline-block;
+  inline-size: 3em;
+  text-align: center;
+  margin-inline-start: -3.25em;
 }

@@ -6,7 +6,7 @@
   "repository": {
     "url": "https://github.com/peaceroad/vsce-p7d-markdown-it-footnote-here"
   },
-  "version": "0.2.1",
+  "version": "0.3.0",
   "engines": {
     "vscode": "^1.57.0"
   },
@@ -26,19 +26,116 @@
       "./style/footnote-here.css"
     ],
     "configuration": {
-      "type": "objct",
+      "type": "object",
       "title": "p7d-markdown-it-footnote-here",
       "properties": {
+        "p7dMarkdownItFootnoteHere.disableBuiltinFootnotes": {
+          "type": "boolean",
+          "default": false,
+          "description": "When false (default), this extension disables VS Code's built-in footnote processing for the markdown-it instance used by this extension."
+        },
         "p7dMarkdownItFootnoteHere.disableStyle": {
           "type": "boolean",
           "default": false,
           "description": "Disable the default CSS of p7d-markdown-it-footnote-here."
+        },
+        "p7dMarkdownItFootnoteHere.beforeSameBacklink": {
+          "type": "boolean",
+          "default": false,
+          "description": "Add letter suffixes (a, b, c, ...) to duplicate footnote references and backlinks."
+        },
+        "p7dMarkdownItFootnoteHere.afterBacklink": {
+          "type": "boolean",
+          "default": false,
+          "description": "Place backlinks at the end of footnote content instead of before it."
+        },
+        "p7dMarkdownItFootnoteHere.afterBacklinkContent": {
+          "type": "string",
+          "default": "",
+          "description": "Content to display for the after-backlink. If empty, uses U+21A9."
+        },
+        "p7dMarkdownItFootnoteHere.afterBacklinkWithNumber": {
+          "type": "boolean",
+          "default": false,
+          "description": "Show a number or letter suffix after after-backlinks."
+        },
+        "p7dMarkdownItFootnoteHere.afterBacklinkSuffixArabicNumerals": {
+          "type": "boolean",
+          "default": false,
+          "description": "Use Arabic numerals (1, 2, ...) for after-backlink suffixes instead of letters."
+        },
+        "p7dMarkdownItFootnoteHere.afterBacklinkdAriaLabelPrefix": {
+          "type": "string",
+          "default": "",
+          "description": "Prefix for aria-label on after-backlinks. If empty, uses \"Back to reference\" plus a trailing space."
+        },
+        "p7dMarkdownItFootnoteHere.labelBra": {
+          "type": "string",
+          "default": "",
+          "description": "Bracket to place before footnote reference numbers. If empty, uses \"[\"."
+        },
+        "p7dMarkdownItFootnoteHere.labelKet": {
+          "type": "string",
+          "default": "",
+          "description": "Bracket to place after footnote reference numbers. If empty, uses \"]\"."
+        },
+        "p7dMarkdownItFootnoteHere.labelSupTag": {
+          "type": "boolean",
+          "default": false,
+          "description": "Wrap footnote references in a sup tag."
+        },
+        "p7dMarkdownItFootnoteHere.backLabelBra": {
+          "type": "string",
+          "default": "",
+          "description": "Bracket to place before backlink numbers. If empty, uses \"[\"."
+        },
+        "p7dMarkdownItFootnoteHere.backLabelKet": {
+          "type": "string",
+          "default": "",
+          "description": "Bracket to place after backlink numbers. If empty, uses \"]\"."
+        },
+        "p7dMarkdownItFootnoteHere.endnotesPrefix": {
+          "type": "string",
+          "default": "",
+          "description": "Prefix that marks a footnote as an endnote. If empty, uses \"en-\"."
+        },
+        "p7dMarkdownItFootnoteHere.endnotesLabelPrefix": {
+          "type": "string",
+          "default": "",
+          "description": "Label prefix for endnote references and backlinks. If empty, uses \"E\"."
+        },
+        "p7dMarkdownItFootnoteHere.endnotesSectionId": {
+          "type": "string",
+          "default": "",
+          "description": "Id attribute for the endnotes section wrapper. If empty, uses \"endnotes\"."
+        },
+        "p7dMarkdownItFootnoteHere.endnotesSectionClass": {
+          "type": "string",
+          "default": "",
+          "description": "Class attribute for the endnotes section wrapper. If empty, no class is added."
+        },
+        "p7dMarkdownItFootnoteHere.endnotesSectionAriaLabel": {
+          "type": "string",
+          "default": "",
+          "description": "Aria-label text or heading text for the endnotes section. If empty, uses \"Notes\"."
+        },
+        "p7dMarkdownItFootnoteHere.endnotesUseHeading": {
+          "type": "boolean",
+          "default": false,
+          "description": "Render a heading in the endnotes section instead of aria-label."
         }
       }
     }
   },
-  "main": "./extension.js",
+  "type": "module",
+  "main": "./dist/extension.js",
+  "scripts": {
+    "build": "node build.js"
+  },
   "dependencies": {
-    "@peaceroad/markdown-it-footnote-here": "^0.1.0"
+    "@peaceroad/markdown-it-footnote-here": "^0.3.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.2"
   }
 }

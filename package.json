@@ -6,7 +6,7 @@
   "repository": {
     "url": "https://github.com/peaceroad/vsce-p7d-markdown-it-footnote-here"
   },
-  "version": "0.3.0",
+  "version": "0.3.1",
   "engines": {
     "vscode": "^1.57.0"
   },
@@ -133,7 +133,7 @@
     "build": "node build.js"
   },
   "dependencies": {
-    "@peaceroad/markdown-it-footnote-here": "^0.3.2"
+    "@peaceroad/markdown-it-footnote-here": "^0.3.3"
   },
   "devDependencies": {
     "esbuild": "^0.27.2"

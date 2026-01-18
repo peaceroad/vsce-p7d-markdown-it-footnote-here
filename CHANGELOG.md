@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.3.1 - 2026/01/19
+
+- Add map to footnote_open for scroll sync
+
 ## 0.3.0 - 2026/01/11
 
 - Add endnotes support.
